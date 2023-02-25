@@ -35,9 +35,6 @@
 			// COMPONENTS
 			"@components/*": ["src/components/*"],
 			"@components"  : ["src/components"],
-			// APP
-			"@app"         : ["src/components/app"],
-			"@app/*"       : ["src/components/app/*"],
 			// CORE
 			"@core/*"      : ["src/core/*"],
 			"@core"        : ["src/core/"],
