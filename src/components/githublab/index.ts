@@ -5,7 +5,7 @@ import { action, makeAutoObservable, observable, reaction, runInAction } from 'm
 import { Api } from '@utils/api';
 import { IResponseData } from '@types';
 
-export class GithubLabClass {
+export class GithubLabState {
 	/** апи по обработке запросов к серверу */
 	private api = new Api();
 	/** значение номера страницы */
@@ -68,4 +68,4 @@ export class GithubLabClass {
 	}
 }
 
-export default () => React.createElement(observer(GithubLabComponent), { state: new GithubLabClass() });
+export default () => React.createElement(observer(GithubLabComponent), { state: new GithubLabState() });

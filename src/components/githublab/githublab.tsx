@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FC, MouseEvent } from 'react';
-import { GithubLabClass } from './';
+import { GithubLabState } from './';
 
-export const GithubLabComponent: FC<{ state: GithubLabClass }> = ({ state }) => {
+export const GithubLabComponent: FC<{ state: GithubLabState }> = ({ state }) => {
 	return (
 		<div className="container">
 			<h5>React form</h5>
