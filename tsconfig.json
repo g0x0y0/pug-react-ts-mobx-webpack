@@ -1,0 +1,57 @@
+{
+	// prettier-ignore
+	"compilerOptions": {
+		"lib"                             : ["dom", "dom.iterable", "esnext"],
+		"jsx"                             : "react",
+		"target"                          : "ES5",
+		"outDir"                          : "build",
+		"module"                          : "CommonJS",
+		"noEmit"                          : false,
+		"strict"                          : true,
+		"allowJs"                         : true,
+		"sourceMap"                       : true,
+		"declaration"                     : false,
+		"noImplicitAny"                   : true,
+		"skipLibCheck"                    : true,
+		"esModuleInterop"                 : true,
+		"isolatedModules"                 : true,
+		"noImplicitThis"                  : true,
+		"noUnusedLocals"                  : false,
+		"removeComments"                  : true,
+		"moduleResolution"                : "node",
+		"strictNullChecks"                : false,
+		"resolveJsonModule"               : true,
+		"downlevelIteration"              : true,
+		"noImplicitReturns"               : true,
+		"noUnusedParameters"              : false,
+		"preserveConstEnums"              : true,
+		"emitDecoratorMetadata"           : true,
+		"experimentalDecorators"          : true,
+		"noFallthroughCasesInSwitch"      : true,
+		"allowSyntheticDefaultImports"    : true,
+		"forceConsistentCasingInFileNames": true,
+		"baseUrl"                         : ".",
+		"paths": {
+			// COMPONENTS
+			"@components/*": ["src/components/*"],
+			"@components"  : ["src/components"],
+			// APP
+			"@app"         : ["src/components/app"],
+			"@app/*"       : ["src/components/app/*"],
+			// CORE
+			"@core/*"      : ["src/core/*"],
+			"@core"        : ["src/core/"],
+			// UTILS
+			"@utils/*"       : ["src/utils/*"],
+			"@utils"         : ["src/utils/"],
+			// TYPES
+			"@types/*"       : ["src/types/*"],
+			"@types"         : ["src/types/"]
+		}
+	},
+	"exclude": ["build", "node_modules"],
+	"include": ["src", "global.d.ts"],
+	"ts-node": {
+		"require": ["tsconfig-paths/register"]
+	}
+}

@@ -1,0 +1,17 @@
+doctype html
+html(lang="ru", dir="ltr")
+	head
+		base(href='/')
+		block head
+			meta(charset="UTF-8")
+			title= 'pug-scss-webpack (optional: ts + react)'
+		block style
+			link(rel="stylesheet", href=require('./style.scss'))
+			link(rel="stylesheet", href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css')
+		block script
+			script(src=require('./index.tsx'), defer)
+
+	body
+		div(id='root', style={width: '50%'})
+		div(style={width: '50%'})
+			include views/githublab/index.pug

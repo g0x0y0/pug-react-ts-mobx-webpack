@@ -1,0 +1,37 @@
+.form__container .form {
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	&__field {
+		display: flex;
+		flex-direction: column;
+		height: 50vh;
+		overflow: auto;
+		gap: 10px;
+	}
+	&__desc {
+		display: flex;
+		gap: 10px;
+		&:hover {
+			background-color: aliceblue;
+		}
+		&_image {
+			width: 60px;
+			height: 60px;
+		}
+	}
+}
+
+.pagination {
+	display: none;
+	font-size: 32px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	&-back,
+	&-forward {
+		font-size: inherit;
+	}
+}

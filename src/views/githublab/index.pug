@@ -1,0 +1,22 @@
+append style
+	link(rel='stylesheet' href=require('./style.scss'))
+append script
+	script(src=require('./index.ts') defer)
+
+mixin form
+	div(class='container form__container')
+		- const sortedArr = ['created', 'updated', 'pushed', 'full_name']
+		h5 Pug form
+		form(class='form')
+			select(name='selectField')
+				each sortType in sortedArr
+					option(value=sortType)= `${sortType}`
+			input(placeholder='search git repo', name='searchField', class='form-input', type="text", value='')
+			button(class='form-button', name='buttonForm')= 'search'
+		.content__field
+		div(class='pagination')
+			button(class='pagination-back')= '<'
+			div(class='current-page')= ''
+			button(class='pagination-forward')= '>'
+
++form()
